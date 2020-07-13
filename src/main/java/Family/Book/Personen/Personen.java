@@ -7,15 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-
-
-
-
-
-
+/**
+ * Klasse Personen ist verantwortlich für das Anlegen neuer Personen
+ */
 @Entity
 public class Personen {
 
+	/**
+	 * Attribute, die einer Person zugewiesen werden sollen
+	 */
 	@Id
 	private int id;
 	private String anrede;
@@ -26,19 +26,29 @@ public class Personen {
 	private String fon;
 	private String mobil;
 	
-	//Verwand
+	/**
+	 * Zum Anlegen der Liste Verwandt
+	 */
+	//Verwandt
 	@ManyToMany
 	private List<Personen> verwandPersonen;
 	
+	/**
+	 * Zum Anlegen der Liste Freunde
+	 */
 	//Freunde
 	@ManyToMany
 	private List<Personen> freundePersonen;
 	
+	/**
+	 * Zum Anlegen der Liste Bekannt
+	 */
 	//Bekannt
 	@ManyToMany
 	private List<Personen> bekanntePersonen;
 	
 	public Personen() {}
+	
 	public Personen(int id) {
         super();
         this.id = id;
@@ -56,6 +66,10 @@ public class Personen {
 		this.mobil = mobil;
 	}
 
+	/**
+	 * @return
+	 * Setter und Getter zum Übergeben und Abrufen von Werten
+	 */
 	public int getId() {
 		return id;
 	}
@@ -120,29 +134,53 @@ public class Personen {
 		this.mobil = mobil;
 	}
 	
-	//Verwand
+	/**
+	 * @return
+	 * Abfrage der Liste Personen Verwandt
+	 */
+	//Verwandt
 	public List<Personen> getVerwandPersonen() {
 		return verwandPersonen;
 	}
 
+	/**
+	 * @param p
+	 * Parameter p wird übergeben
+	 */
 	public void addVerwandPersonen(Personen p) {
 		this.verwandPersonen.add(p);
 	}
 	
+	/**
+	 * @return
+	 * Abfrage der Liste Personen befreundet
+	 */
 	//Freunde
 	public List<Personen> getFreundePersonen() {
 		return freundePersonen;
 	}
 	
+	/**
+	 * @param p
+	 * Parameter p wird übergeben
+	 */
 	public void addFreundePersonen(Personen p) {
 		this.freundePersonen.add(p);
 	}
 	
+	/**
+	 * @return
+	 * Abfrage der Liste Personen bekannt
+	 */
 	//Bekannt
 	public List<Personen> getBekanntePersonen() {
 		return bekanntePersonen;
 	}
-		
+	
+	/**
+	 * @param p
+	 * Parameter p wird übergeben
+	 */
 	public void addBekanntePersonen(Personen p) {
 		this.bekanntePersonen.add(p);
 	}
