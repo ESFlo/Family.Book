@@ -1,22 +1,22 @@
 package Family.Book.Personen;
 
-
 import java.util.List;
-
 
 import org.springframework.data.repository.CrudRepository;
 
-
-
 public interface PersonenRepository extends CrudRepository<Personen, Integer> {
-	
-	//Verwandt
+
+	// Verwandt
 	public List<Personen> findByVerwandPersonen(String verwandPersonen);
-	
-	//Freunde
+
+	// Freunde
 	public List<Personen> findByFreundePersonen(String freundePersonen);
-	
-	//Bekannte
+
+	// Bekannte
 	public List<Personen> findByBekanntePersonen(String bekanntePersonen);
+
+	public List<Personen> findByVorname(String vorname);
+
+	public List<Personen> findByNachname(String nachname);
 
 }
