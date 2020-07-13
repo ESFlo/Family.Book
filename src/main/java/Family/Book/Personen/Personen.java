@@ -47,12 +47,31 @@ public class Personen {
 	@ManyToMany
 	private List<Personen> bekanntePersonen;
 	
+	/**
+	 * Erstellen eines leeren Konstruktors
+	 */
 	public Personen() {}
 	
+	/**
+	 * @param id
+	 * Erstellen eines Konstruktors mit Uebergabe des Parameters id
+	 */
 	public Personen(int id) {
         super();
         this.id = id;
     }	
+	
+	/**
+	 * @param id
+	 * @param anrede
+	 * @param vorname
+	 * @param nachname
+	 * @param adresse
+	 * @param email
+	 * @param fon
+	 * @param mobil
+	 * Uebergabe der Paramter der Person
+	 */
 	public Personen(int id, String anrede, String vorname, String nachname, String adresse, String email, String fon,
 			String mobil) {
 		super();
@@ -68,7 +87,7 @@ public class Personen {
 
 	/**
 	 * @return
-	 * Setter und Getter zum Übergeben und Abrufen von Werten
+	 * Setter und Getter zum Uebergeben und Abrufen von Werten
 	 */
 	public int getId() {
 		return id;
@@ -145,7 +164,7 @@ public class Personen {
 
 	/**
 	 * @param p
-	 * Parameter p wird übergeben
+	 * Parameter p wird uebergeben
 	 */
 	public void addVerwandPersonen(Personen p) {
 		this.verwandPersonen.add(p);
@@ -162,7 +181,7 @@ public class Personen {
 	
 	/**
 	 * @param p
-	 * Parameter p wird übergeben
+	 * Parameter p wird uebergeben
 	 */
 	public void addFreundePersonen(Personen p) {
 		this.freundePersonen.add(p);
@@ -179,7 +198,7 @@ public class Personen {
 	
 	/**
 	 * @param p
-	 * Parameter p wird übergeben
+	 * Parameter p wird uebergeben
 	 */
 	public void addBekanntePersonen(Personen p) {
 		this.bekanntePersonen.add(p);
