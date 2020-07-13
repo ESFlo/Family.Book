@@ -17,7 +17,7 @@ public class PersonenTest {
 	}
 
 	@Test
-	public void personenVerfügbar() {
+	public void personenVerfuegbar() {
 		p.setId(1);
 		Assert.assertEquals(1, 1);
 	}
