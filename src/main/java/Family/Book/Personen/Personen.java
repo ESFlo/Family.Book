@@ -7,15 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-
-
-
-
-
-
+/**
+ * Klasse Personen ist verantwortlich für das Anlegen neuer Personen
+ */
 @Entity
 public class Personen {
 
+	/**
+	 * Attribute, die einer Person zugewiesen werden sollen
+	 */
 	@Id
 	private int id;
 	private String anrede;
@@ -26,23 +26,52 @@ public class Personen {
 	private String fon;
 	private String mobil;
 	
-	//Verwand
+	/**
+	 * Zum Anlegen einer Liste Verwandt
+	 */
+	//Verwandt
 	@ManyToMany
 	private List<Personen> verwandPersonen;
 	
+	/**
+	 * Zum Anlegen einer Liste Freunde
+	 */
 	//Freunde
 	@ManyToMany
 	private List<Personen> freundePersonen;
 	
+	/**
+	 * Zum Anlegen einer Liste Bekannt
+	 */
 	//Bekannt
 	@ManyToMany
 	private List<Personen> bekanntePersonen;
 	
+	/**
+	 * Erstellen eines leeren Konstruktors
+	 */
 	public Personen() {}
+	
+	/**
+	 * @param id
+	 * Erstellen eines Konstruktors mit Uebergabe des Parameters id
+	 */
 	public Personen(int id) {
         super();
         this.id = id;
     }	
+	
+	/**
+	 * @param id
+	 * @param anrede
+	 * @param vorname
+	 * @param nachname
+	 * @param adresse
+	 * @param email
+	 * @param fon
+	 * @param mobil
+	 * Uebergabe der Paramter der Person
+	 */
 	public Personen(int id, String anrede, String vorname, String nachname, String adresse, String email, String fon,
 			String mobil) {
 		super();
@@ -56,6 +85,10 @@ public class Personen {
 		this.mobil = mobil;
 	}
 
+	/**
+	 * @return
+	 * Setter und Getter zum Uebergeben sowie Abrufen von Werten
+	 */
 	public int getId() {
 		return id;
 	}
@@ -120,29 +153,53 @@ public class Personen {
 		this.mobil = mobil;
 	}
 	
-	//Verwand
+	/**
+	 * @return
+	 * Abfrage der Liste Personen Verwandt
+	 */
+	//Verwandt
 	public List<Personen> getVerwandPersonen() {
 		return verwandPersonen;
 	}
 
+	/**
+	 * @param p
+	 * Parameter p wird uebergeben
+	 */
 	public void addVerwandPersonen(Personen p) {
 		this.verwandPersonen.add(p);
 	}
 	
+	/**
+	 * @return
+	 * Abfrage der Liste Personen befreundet
+	 */
 	//Freunde
 	public List<Personen> getFreundePersonen() {
 		return freundePersonen;
 	}
 	
+	/**
+	 * @param p
+	 * Parameter p wird uebergeben
+	 */
 	public void addFreundePersonen(Personen p) {
 		this.freundePersonen.add(p);
 	}
 	
+	/**
+	 * @return
+	 * Abfrage der Liste Personen bekannt
+	 */
 	//Bekannt
 	public List<Personen> getBekanntePersonen() {
 		return bekanntePersonen;
 	}
-		
+	
+	/**
+	 * @param p
+	 * Parameter p wird uebergeben
+	 */
 	public void addBekanntePersonen(Personen p) {
 		this.bekanntePersonen.add(p);
 	}
