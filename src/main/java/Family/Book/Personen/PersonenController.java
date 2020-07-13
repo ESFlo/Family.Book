@@ -15,6 +15,11 @@ public class PersonenController {
 	@Autowired
 	PersonenService personenService;
 
+	/** Standartmethoden fuer das GET Hinzufuegen, PUT aendern und DELETE loeschen von einzelnen Personen
+	 * Sowie die Ansprache, unter welcher URL dies erreicht werden kann
+	 */
+	
+	
 	@RequestMapping(method = RequestMethod.GET, value = "/personen")
 	public List<Personen> getAllPersonen() {
 		return personenService.getAllPersonen();
