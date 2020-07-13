@@ -4,19 +4,20 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
+
 @RestController
 @CrossOrigin
 public class LoginController { // MUSS WIE DIE JETZIGE KLASSE HEIßEN
 
-	Logger log = LoggerFactory.getLogger(LoginController.class); // MUSS WIE DIE JETZIGE KLASSE HEIßEN
+	private static final Logger LOGGER = LogManager.getLogger(LoginController.class);
 
 	@GetMapping("test")
 	public String test() {
@@ -27,9 +28,9 @@ public class LoginController { // MUSS WIE DIE JETZIGE KLASSE HEIßEN
 	public void forwardToIndex(HttpServletResponse http) {
 		try {
 			http.sendRedirect("/indexlog.html");
-			log.info("User on indexlog.html");
+			LOGGER.info("User on indexlog.html");
 		} catch (IOException e) {
-			log.error("IOException in ViewController forwardToIndex method: " + e);
+			LOGGER.error("IOException in ViewController forwardToIndex method: " + e);
 		}
 	}
 
@@ -37,9 +38,9 @@ public class LoginController { // MUSS WIE DIE JETZIGE KLASSE HEIßEN
 	public void login(HttpServletResponse http) {
 		try {
 			http.sendRedirect("/kontaktErstellen.html");
-			log.info("Login succesful");
+			LOGGER.info("Login erfolgreich");
 		} catch (IOException e) {
-			log.error("IOException in Controller login method: " + e);
+			LOGGER.error("IOException in Controller login method: " + e);
 		}
 	}
 
@@ -47,8 +48,9 @@ public class LoginController { // MUSS WIE DIE JETZIGE KLASSE HEIßEN
 	public void logout(HttpServletResponse http) {
 		try {
 			http.sendRedirect("/indexlog.html");
+			LOGGER.info("Logout war erfolgreich");
 		} catch (IOException e) {
-			log.error("IOException in Controller logout method: " + e);
+			LOGGER.error("IOException in Controller logout method: " + e);
 		}
 	}
 }

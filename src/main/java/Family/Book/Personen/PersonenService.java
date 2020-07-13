@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonenService {
+	
+	private static final Logger LOGGER = LogManager.getLogger(PersonenService.class);
 	
 	@Autowired
 	PersonenRepository personenRepository;
@@ -34,17 +38,21 @@ public class PersonenService {
 	
 	public void createPerson(Personen personen) {
 		personenRepository.save(personen);
+		LOGGER.warn("Person erstellt");
 	}
 	
 	public void updatePerson(int id, Personen personen) {
 		personenRepository.save(personen);
+		LOGGER.info(
+				"Person geändert: " + personen.getId() + " " + personen.getNachname() + " " + personen.getVorname());
 	}
 	
 	public void deletePerson(int id) {
 		personenRepository.deleteById(id);
+		LOGGER.warn("Person gelöscht");
 	}
 	
-	//Verwand
+	//Verwandt
 	public List<Personen> getAllPersonenOfVerwandPersonen(String verwandPersonen) {
 		return personenRepository.findByVerwandPersonen(verwandPersonen);
 	}
