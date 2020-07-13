@@ -10,6 +10,11 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface PersonenRepository extends CrudRepository<Personen, Integer> {
 
+	/**
+	 * Implementieren der Suchfunktion und ermoeglicht alle Funktionen aus dem
+	 * CrudRepository zuverwenden
+	 */
+
 	// Verwandt
 	public List<Personen> findByVerwandPersonen(String verwandPersonen);
 

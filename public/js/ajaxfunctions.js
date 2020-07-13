@@ -1,73 +1,87 @@
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//Personen
 
-//On Page load - register listeners and load existing videos in datatable
+/**
+ * Personen
+ */
+
+/**
+ * Die Tabellen werden geladen
+ */
 $(document).ready(function() {
-	//
 	loadDataTable();
 	loadFriendTable();
 	loadVerwandTable();
 	loadBekanntTable();
-	// process the form newPerson
-	$("#newPersonen").submit(function(event) { //geändert
-		postPersonen(event);					//geändert
-	});
 	
-	// Load Datatable
-	$('#loadtable').click(function() {
+/**
+ * Die Form new Person wird verarbeitet
+ */
+$("#newPersonen").submit(function(event) { 
+	postPersonen(event);				
+});
+	
+/**
+ * Tabelle wird geladen
+ */
+$('#loadtable').click(function() {
 	loadDataTable();
 	});
-	
-	
-	
 });
 
-
 function loadFriendTable() {
-	var table = $('#friendtable').DataTable({ //ÄNDERUNG
+	var table = $('#friendtable').DataTable({ 
 		destroy : true,
-		//"processing" : true,
 		"ajax" : {
-			"url" : "/personenbyfreundePersonen", // URL
-			"dataSrc" : "" // Cause of flat JsonObjects
+/**
+ * URL
+ */
+			"url" : "/personenbyfreundePersonen",
+/**
+ * Cause of flat JsonObjects
+ */
+			"dataSrc" : "" 
 		},
 		"columns" : [ {
 			"data" : "id"
 		}, {
 			"data" : "freundePersonen.0.id"
-		
 		}, 
-		
-		
 		]
 	});
 }
+
 function loadVerwandTable() {
-	var table = $('#verwandtable').DataTable({ //ÄNDERUNG
+	var table = $('#verwandtable').DataTable({
 		destroy : true,
-		//"processing" : true,
 		"ajax" : {
-			"url" : "/personenbyverwandPersonen", // URL
-			"dataSrc" : "" // Cause of flat JsonObjects
+/**
+ * URL
+ */
+			"url" : "/personenbyverwandPersonen",
+/**
+ * Cause of flat JsonObjects
+ */
+			"dataSrc" : ""
 		},
 		"columns" : [ {
 			"data" : "id"
 		}, {
 			"data" : "verwandPersonen.0.id"
-		
 		}, 
-		
-		
 		]
 	});
 }
 function loadBekanntTable() {
-	var table = $('#bekannttable').DataTable({ //ÄNDERUNG
+	var table = $('#bekannttable').DataTable({ 
 		destroy : true,
-		//"processing" : true,
 		"ajax" : {
-			"url" : "/personenbybekanntePersonen", // URL
-			"dataSrc" : "" // Cause of flat JsonObjects
+/**
+ * URL
+ */
+			"url" : "/personenbybekanntePersonen",
+/**
+ * Cause of flat JsonObjects
+ */
+			"dataSrc" : ""
 		},
 		"columns" : [ {
 			"data" : "id"
@@ -80,12 +94,16 @@ function loadBekanntTable() {
 		]
 	});
 }
-function postPersonen(event) { //Änderung
-	// get the form data
+function postPersonen(event)
+/**
+ * get the form data
+ */
+/**
+ * Das val() steht für den Wert der für die jeweiligen 
+ * Variablen eingegeben wird
+ */
 	var formData = {
-		'id' : $('input[name=id]').val(), // das val() steht für den wert
-												// der zb bei title eingegeben
-												// wird, zb. rapunzel
+		'id' : $('input[name=id]').val(),
 		'anrede' : $('input[name=anrede]').val(),
 		'vorname' : $('input[name=vorname]').val(),
 		'nachname' : $('input[name=nachname]').val(),
@@ -95,31 +113,35 @@ function postPersonen(event) { //Änderung
 		'mobil' : $('input[name=mobil]').val()
 		
 	};
-	// process the form
+	// 
 	$.ajax({
-		type : 'POST', // define the type of HTTP verb we want to
-		// use (POST for our form)
+		type : 'POST',
 		contentType : 'application/json',
-		url : '/personen', // url where we want to POST ÄNDERUNG
-		data : JSON.stringify(formData), // data we want to POST
+/**
+ * URL, wo man posten möchte
+ */
+		url : '/personen', 
+/**
+ * Daten, die wir posten möchten
+ */
+		data : JSON.stringify(formData),
 		success : function(data, textStatus, jQxhr) {
-			loadDataTable(); // damit die tabelle sofort neu lädt, wenn etwas
-								// gesendet wird (dann muss man nicht jedes mal
-								// die seite neu laden)
+/**
+ * damit die Tabelle sofort neu lädt, wenn etwas gesendet wird
+ * dann muss man nicht jedes mal die Seite neu laden
+ */
+			loadDataTable(); 
 		},
-		error : function(jqXhr, textStatus, errorThrown) { // praktisch fürs
-															// debugging, ohne
-															// das wird keine
-															// fehlermeldung
-															// angezeigt
+/**
+ * sorgt dafür, dass Fehlermeldungen angezeigt werden,
+ * ist praktisch fürs Debugging
+ */
+		error : function(jqXhr, textStatus, errorThrown) { 
 			console.log(errorThrown);
 		}
 	});
-	// stop the form from submitting the normal way and refreshing the
-	// page
-	event.preventDefault(); // kp ist irgendwie dafür da, dass die seite nicht
-							// neu geladen wird sondern man ein
-							// andwendungsfeeling hat
+	
+	event.preventDefault(); 
 }
 
 
@@ -190,11 +212,11 @@ function addBeziehung() {
 	event.preventDefault();
 }
 function loadDataTable() {
-	var table = $('#personentable').DataTable({ //ÄNDERUNG
+	var table = $('#personentable').DataTable({ 
 		destroy : true,
 		"ajax" : {
-			"url" : "/personen", // URL
-			"dataSrc" : "" // Cause of flat JsonObjects
+			"url" : "/personen", 
+			"dataSrc" : "" 
 		},
 		"columns" : [ {
 			"data" : "id"

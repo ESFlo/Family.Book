@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+
+
+<!-- Durch die meta Angabe wird die Zeichencodierung definiert
+Einbindung des CSS-Stylesheets und der Javascripte -->
 
 <head>
 <meta charset="UTF-8">
@@ -24,37 +27,35 @@
 	crossorigin="anonymous"></script>
 
 
-
-
+<!-- Titel in der Titelleiste des Browserfensters wird festgelegt-->
 
 <title>FamilyBook</title>
 </head>
 
 <body>
-	<div
-		class="login d-flex justify-content-center align-items-center flex-column">
+
+	<!--  Flexible Box Layout Module für die Erleichterung das Entwerfen einer flexiblen und reaktionsschnellen Layoutstruktur -->
+	<div>
+		class="login d-flex justify-content-center align-items-center
+		flex-column">
 		<div class="login-header d-flex justify-content-center flex-column">
+
+			<!-- Logo für den Login -->
 			<div
 				class="login-header-logo d-flex justify-content-center align-items-center">
-
-
 				<img src="https://www.iranhotels.com//assets/img/admin.png"
 					height="100" width="200" alt="CHIP-Logo" border="2" align="right"
 					hspace="50" vspace="50">
-
-
-
-
-
 			</div>
 			<div
 				class="login-header-description d-flex justify-content-center align-items-center">
+				<!-- Überschrift -->
 				<h3>FamilyBook</h3>
 			</div>
 		</div>
 
 
-
+		<!-- Login Formular mit Textfelder und Bitte um Eingabe  -->
 		<div
 			class="login-body d-flex justify-content-center align-items-center flex-column">
 			<form>
@@ -67,7 +68,10 @@
 				<div class="form-group">
 					<label for="password">Passwort</label> <input type="password"
 						class="form-control" id="password"> <small id="emailHelp"
-						class="form-text text-muted">Bitte geben Sie Ihr Passwort ein</small>
+						class="form-text text-muted">Bitte geben Sie Ihr Passwort
+						ein</small>
+
+					<!--  Login Button zum anmelden -->
 				</div>
 				<a id="login" class="btn btn-primary" href="login" tabindex="-1"
 					role="button">Log in</a>
