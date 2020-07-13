@@ -27,21 +27,21 @@ public class Personen {
 	private String mobil;
 	
 	/**
-	 * Zum Anlegen der Liste Verwandt
+	 * Zum Anlegen einer Liste Verwandt
 	 */
 	//Verwandt
 	@ManyToMany
 	private List<Personen> verwandPersonen;
 	
 	/**
-	 * Zum Anlegen der Liste Freunde
+	 * Zum Anlegen einer Liste Freunde
 	 */
 	//Freunde
 	@ManyToMany
 	private List<Personen> freundePersonen;
 	
 	/**
-	 * Zum Anlegen der Liste Bekannt
+	 * Zum Anlegen einer Liste Bekannt
 	 */
 	//Bekannt
 	@ManyToMany
