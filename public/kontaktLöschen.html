@@ -1,86 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>FamilyBook</title>
-<meta charset="utf-8">
+	<head>
+	<title>FamilyBook</title>
+<!-- Durch die meta Angabe wird die Zeichencodierung definiert
+Einbindung des CSS-Stylesheets und der Javascripte -->
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="js/ajaxfunctions.js"></script>
+	</head>
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/ajaxfunctions.js"></script>
-</head>
-
-
-
-<body>
+	<body>
 
 		<header>
 			<h1>FamilyBook</h1>
 		</header>
-		
-	
-
-	<nav>
-	
-<ul>
-  <li><a href="kontaktErstellen.html">Kontakt hinzufügen</a></li>
-  <li><a href="kontaktLöschen.html">Kontakt löschen</a></li>
-  <li><a href="beziehungErstellen.html">Beziehung hinzufügen</a></li>
-  <li><a href="beziehungAnzeigen.html">Beziehungen anzeigen</a></li>
-  <li><a href="beziehungLöschen.html">Beziehungen löschen</a></li>
-  <li><a id="logout" class="btn btn-primary" href="logout"
+<!-- Navigator, mit Links zu den jeweiligen Seiten -->	
+		<nav>
+			<ul>
+  				<li><a href="kontaktErstellen.html">Kontakt hinzufügen</a></li>
+  				<li><a href="kontaktLöschen.html">Kontakt löschen</a></li>
+  				<li><a href="beziehungErstellen.html">Beziehung hinzufügen</a></li>
+  				<li><a href="beziehungAnzeigen.html">Beziehungen anzeigen</a></li>
+  				<li><a href="beziehungLöschen.html">Beziehungen löschen</a></li>
+<!-- Button für den Logout im Navigator, führt zurück zum Login-->  
+  				<li><a id="logout" class="btn btn-primary" href="logout"
 				tabindex="-1" role="button">Logout</a></li>
-</ul>	
-</nav>
+			</ul>	
+		</nav>
 
-
-<section>
-		<h2>Kontakte löschen</h2>
+		<section>
+			<h2>Kontakte löschen</h2>
 			<form id="deletePersonen">
-
+<!-- Textfeld für die ID, von der Person die gelöscht werden soll -->
 				<label for="id1"> ID*: 
 					<input type="text" required="required" id="id1" name="id1">
 				</label> 
-	
-				<!-- Durch drücken des Buttons wird der Kontakt hinter der eingegebenen ID gelöscht -->			
+	<!-- Durch drücken des Buttons wird der Kontakt hinter der eingegebenen ID gelöscht -->			
 				<label>
 					<input id="deletePersonenButton" class="loeschen" type="submit" value="löschen">
 				</label>
-				
 			</form>
-				
 		</section>
 
-		
-
-	<article>
-		<h2>Meine Kontakte</h2>
-		
+		<article>
+			<h2>Meine Kontakte</h2>
+<!-- Button, der die Personentabelle neu lädt,
+wird benötigt, wenn Kontakt über Postman hinzugefügt wird -->		
 			<button id="loadtable">Laden</button>
 			
-			
-		<table id="personentable" class="display">
-			<thead>
-				<tr class display>
-					<th>ID</th>
-					<th>Anrede</th>
-					<th>Vorname</th>
-					<th>Nachname</th>
-					<th>Adresse</th>
-					<th>E-Mail</th>
-					<th>Telefon</th>
-					<th>Handy</th>
-				</tr>
-				
-			
-			</thead>
-		</table>
+				<table id="personentable" class="display">
+					<thead>
+						<tr class display>
+							<th>ID</th>
+							<th>Anrede</th>
+							<th>Vorname</th>
+							<th>Nachname</th>
+							<th>Adresse</th>
+							<th>E-Mail</th>
+							<th>Telefon</th>
+							<th>Handy</th>
+						</tr>
+					</thead>
+				</table>
 		
-	</article>
+		</article>
 
-	<footer>Copyright (c) - 2020 by Elena, Elif, Carla, Manuela!</footer>
-	
-	
+		<footer>Copyright (c) - 2020 by Elena, Elif, Carla, Manuela!</footer>
 </body>
 </html>

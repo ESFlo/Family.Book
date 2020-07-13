@@ -1,4 +1,4 @@
-body * {
+body*{
 	margin: 12px
 }
 
@@ -30,6 +30,7 @@ article, section {
 	background-color: lightgrey;
 }
 
+/* Navigator bleibt auf der linken Seite */
 nav {
 	margin-top: 0;
 	width: 200px;
@@ -41,6 +42,7 @@ nav {
 	color: black;
 }
 
+/* Die Liste hat keine Aufzählungszeichen*/
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -49,6 +51,7 @@ ul {
 	background-color: #f1f1f1;
 }
 
+/* Der Text in der Liste wird nicht als Link dargestellt */
 li a {
 	display: block;
 	color: #000;
@@ -56,7 +59,7 @@ li a {
 	text-decoration: none;
 }
 
-/* Change the link color on hover */
+/* Ändert beim drüberfahren die Farbe des Links */
 li a:hover {
 	background-color: #555;
 	color: white;
@@ -75,6 +78,8 @@ aside {
 	padding: 8px 0 8px 16px;
 }
 
+/* Clear Both wird benötigt, damit die 
+Verschiebung nach links (vom Navigator) beendet wird */
 footer {
 	clear: both;
 	width: 100%;
@@ -97,7 +102,8 @@ th, td {
 thead th {
 	background-color: #e4ebf2;
 	color: black;
-	font-family: "Verdana" font-weight : 100;
+	font-family: "Verdana";
+	font-weight : 100;
 }
 
 td {
@@ -107,6 +113,8 @@ td {
 	box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
 }
 
+/* Gerade Platznummern, also jede Zweite
+bekommt eine andere Farbe */
 tbody tr:nth-child(even) {
 	background-color: #e4ebf2;
 	color: #000;
