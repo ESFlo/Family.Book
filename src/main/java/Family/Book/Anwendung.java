@@ -18,7 +18,8 @@ public class Anwendung implements ApplicationRunner{
 	private static final Logger LOGGER = LogManager.getLogger(Anwendung.class);
 	
 	/**
-	 * Main-Methode zum Ausführen der SpringApplication-Anwendung
+	 * Main mit Ausführung der SpringApplication
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(Anwendung.class, args);

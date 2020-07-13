@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"Family.Book","c":"Anwendung","l":"Anwendung()","url":"%3Cinit%3E()"},{"p":"Family.Book","c":"Anwendung","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"Family.Book","c":"Anwendung","l":"run(ApplicationArguments)","url":"run(org.springframework.boot.ApplicationArguments)"}]
