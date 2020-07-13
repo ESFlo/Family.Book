@@ -7,16 +7,27 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+
 @SpringBootApplication
 public class Anwendung implements ApplicationRunner{
-
+	
+	/**
+	 * Initialisierung des Loggers
+	 */
 	private static final Logger LOGGER = LogManager.getLogger(Anwendung.class);
-
+	
+	/**
+	 * Main-Methode zum Ausführen der SpringApplication-Anwendung
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(Anwendung.class, args);
 
 	}
 
+	/**
+	 * Tests für den Logger, werden nach dem Starten in der Console angezeigt
+	 */
 	@Override
 	public void run(ApplicationArguments applicationArguments) throws Exception {
 		LOGGER.trace("Trace log");
