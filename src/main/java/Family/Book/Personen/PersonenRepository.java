@@ -2,6 +2,10 @@ package Family.Book.Personen;
 
 import java.util.List;
 
+/** Implementieren der Suchfunktion
+ * und ermoeglicht alle Funktionen aus dem CrudRepository zuverwenden 
+ * */
+
 import org.springframework.data.repository.CrudRepository;
 
 public interface PersonenRepository extends CrudRepository<Personen, Integer> {
