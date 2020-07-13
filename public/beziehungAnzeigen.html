@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FamilyBook</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/ajaxfunctions.js"></script>
+</head>
+
+
+
+<body>
+
+		<header>
+			<h1>FamilyBook</h1>
+		</header>
+		
+	
+
+	<nav>
+	
+<ul>
+  <li><a href="kontaktErstellen.html">Kontakt hinzufügen</a></li>
+  <li><a href="kontaktLöschen.html">Kontakt löschen</a></li>
+  <li><a href="beziehungErstellen.html">Beziehung hinzufügen</a></li>
+  <li><a href="beziehungAnzeigen.html">Beziehungen anzeigen</a></li>
+  <li><a href="beziehungLöschen.html">Beziehungen löschen</a></li>
+</ul>	
+</nav>
+
+
+
+<section>
+		<h2>Beziehungen anzeigen</h2>
+		
+		<h3>Freunde</h3>
+		<button id="loadfriendtable">Laden Freunde</button>
+		<table id="friendtable" class="display">
+			<thead>
+				<tr class display>
+					<th>ID 1</th>
+					<th>ID 2</th>
+					
+				</tr>
+				
+				
+			</thead>
+		</table>
+		
+		<h3>Verwandte</h3>
+		<button id="loadverwandtable">Laden Verwandte</button>
+		<table id="verwandtable" class="display">
+			<thead>
+				<tr class display>
+					<th>ID 1</th>
+					<th>ID 2</th>
+					
+				</tr>
+				
+				
+			</thead>
+		</table>	
+			
+		<h3>Bekannte</h3>
+		<button id="loadbekannttable">Laden Bekannt</button>
+		<table id="bekannttable" class="display">
+			<thead>
+				<tr class display>
+					<th>ID 1</th>
+					<th>ID 2</th>
+					
+				</tr>
+				
+				
+			</thead>
+		</table>
+	
+		</section>
+
+		
+
+	<article>
+		<h2>Meine Kontakte</h2>
+		
+			<button id="loadtable">Laden</button>
+		<table id="personentable" class="display">
+			<thead>
+				<tr class display>
+					<th>ID</th>
+					<th>Anrede</th>
+					<th>Vorname</th>
+					<th>Nachname</th>
+					<th>Adresse</th>
+					<th>E-Mail</th>
+					<th>Telefon</th>
+					<th>Handy</th>
+				</tr>
+				
+				
+			</thead>
+		</table>
+		
+	</article>
+
+	<footer>Copyright (c) - 2020 by Elena, Elif, Carla, Manuela!</footer>
+	
+	
+</body>
+</html>

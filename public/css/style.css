@@ -1,0 +1,158 @@
+body * {
+
+margin: 12px
+}
+
+body {
+	background-color: lightgrey;
+}
+
+h1{
+	font-family: "Verdana";
+	font-weight: 150;
+	font-size: 50px;
+	margin-top: 20px;
+	color: black;
+	text-align: left;
+	background-color: darkgrey;
+	color: white;
+}
+
+h2{
+	
+font-family: "Verdana";
+	font-weight: 100;
+	margin-top: 20px;
+	color: black;
+}
+
+
+article, section {
+	margin-right: 230px;
+	margin-left: 230px;
+	background-color: lightgrey;
+	
+}
+
+nav{
+	margin-top:0;
+	width: 200px;
+	float: left;
+	border: 1px solid black;
+	font-family: "Verdana";
+	font-weight: 100;
+	font-size: 20px;
+	color: black;
+	
+	
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+aside {
+	margin-top:0;
+	width: 200px;
+	float: right;
+	border: 1px solid black;
+	font-family: "Verdana";
+	font-weight: 100;
+	font-size: 20px;
+	background-color: #e4ebf2;
+	color: black;	
+	padding: 8px 0 8px 16px;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+	background-color: darkgrey;
+	color: white;
+	text-align: center;
+	font-family: "Verdana";
+
+}
+
+
+table {
+	border-collapse: separate;
+	border-spacing: 0.2em;
+}
+
+th,td {
+	padding: 0.2em 0.5em;
+	border-radius: 0.1em;
+}
+
+thead th {
+	background-color: #e4ebf2;
+	color: black;
+	font-family: "Verdana"
+	font-weight: 100;
+}
+
+td {
+	font-family: "Verdana";
+	font-weight: 100;
+	text-align: right;
+	box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+tbody tr:nth-child(even) {
+	background-color: #e4ebf2;
+	color: #000;
+}
+
+td:empty {
+	box-shadow: none;
+	background-color: none;
+}
+
+
+table.display {
+	
+	width: 1050px;
+	border-collapse: collapse;
+
+	font-family: "Verdana";
+	
+  
+}
+
+
+table.personen {
+	width: 1050px;
+	border-collapse: collapse;
+	font-family: "Verdana";
+
+	
+}
+
+table.beziehung {
+	
+	border-collapse: collapse;
+	
+	font-family: "Verdana";
+	
+	
+}

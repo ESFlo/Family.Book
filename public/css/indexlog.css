@@ -1,0 +1,36 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	background-color: black;
+}
+
+div.login {
+	height: 500px;
+	width: 500px;
+	margin-top: 7%;
+}
+
+div.login-header {
+	height: 20%;
+	width: 100%;
+}
+
+div.login-body {
+	height: 70%;
+	width: 100%;
+	border: 1px solid #d3d3d3;
+	border-radius: .25rem;
+	margin-top: 3%;
+	background-color: #FFFFFF;
+}
+
+div.login-body>form {
+	height: 90%;
+	width: 90%;
+}
+
+
+	
+	
+}

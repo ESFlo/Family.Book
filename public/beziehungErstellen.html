@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FamilyBook</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/ajaxfunctions.js"></script>
+</head>
+
+
+
+<body>
+
+		<header>
+			<h1>FamilyBook</h1>
+		</header>
+		
+	
+
+	<nav>
+	
+<ul>
+  <li><a href="kontaktErstellen.html">Kontakt hinzufügen</a></li>
+  <li><a href="kontaktLöschen.html">Kontakt löschen</a></li>
+  <li><a href="beziehungErstellen.html">Beziehung hinzufügen</a></li>
+  <li><a href="beziehungAnzeigen.html">Beziehungen anzeigen</a></li>
+  <li><a href="beziehungLöschen.html">Beziehungen löschen</a></li>
+</ul>	
+</nav>
+
+
+<section>
+		<h2>Neue Beziehung anlegen</h2>
+
+		
+		
+			<table class="beziehung">
+
+					<tr>
+						
+						<th>Beziehung</th>
+						<th>ID der ersten Person</th>
+						<th> ID der zweiten Person </th>
+					</tr>
+
+					<tr>
+
+						<td><select name="Beziehung" id="addBeziehung">
+								<option value="befreundet">Freunde</option>
+								<option value="familie">Familie</option>
+								<option value="bekannt">Bekannte</option>
+						</select></td>
+						<td><input type="text" name="id1" required="required"></td>
+						<td><input type="text" name="id2" required="required"></td>
+					</tr>
+					
+
+				</table>
+				
+				<input type="submit" id="newBeziehungButton">  <!-- ANPASSEN NACH ELENAS -->
+				
+				
+		</section>
+
+		
+
+	<article>
+		<h2>Meine Kontakte</h2>
+		
+			<button id="loadtable">Laden</button>
+		<table id="personentable" class="display">
+			<thead>
+				<tr class display>
+					<th>ID</th>
+					<th>Anrede</th>
+					<th>Vorname</th>
+					<th>Nachname</th>
+					<th>Adresse</th>
+					<th>E-Mail</th>
+					<th>Telefon</th>
+					<th>Handy</th>
+				</tr>
+				
+				
+			</thead>
+		</table>
+		
+	</article>
+
+	<footer>Copyright (c) - 2020 by Elena, Elif, Carla, Manuela!</footer>
+	
+	
+</body>
+</html>

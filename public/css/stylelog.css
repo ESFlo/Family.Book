@@ -1,0 +1,43 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+label {
+	color: #0071bc;
+
+}
+
+h1, h2, h3, h4, h5, h6, span {
+	color: #0071bc;
+	font-weight: bold;
+	user-select: none;
+}
+
+li {
+	
+}
+
+li:hover {
+	color: red;
+}
+
+li:active {
+	text-decoration: underline;
+}
+
+a {
+	font-weight: bold;
+	user-select: none;
+	color: white;
+}
+
+a.btn {
+	background-color: #c0c0c0;
+}
+
+i {
+	color: #000000;
+	font-size: 20px;
+	margin-right: 5px;
+}
