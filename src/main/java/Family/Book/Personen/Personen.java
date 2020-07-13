@@ -87,7 +87,7 @@ public class Personen {
 
 	/**
 	 * @return
-	 * Setter und Getter zum Uebergeben und Abrufen von Werten
+	 * Setter und Getter zum Uebergeben sowie Abrufen von Werten
 	 */
 	public int getId() {
 		return id;
